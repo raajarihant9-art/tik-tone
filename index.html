@@ -35,9 +35,49 @@ button{
 </head>
 
 <body>
+  <section class="order-box">
+  <h2>🥛 Doodh Kharidne Ke Liye Contact Karein</h2>
+
+  <input type="text" id="customerName" placeholder="Apna Naam" required>
+
+  <textarea id="customerAddress" placeholder="Apna Pata"></textarea>
+
+  <input type="tel" id="customerPhone" placeholder="Mobile Number" required>
+
+  <button onclick="sendWhatsApp()">
+    📲 WhatsApp Par Order Bheje
+  </button>
+</section>
+
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById("customerName").value;
+  const address = document.getElementById("customerAddress").value;
+  const phone = document.getElementById("customerPhone").value;
+
+  if (!name || !address || !phone) {
+    alert("Bhai, Naam, Pata aur Mobile Number bhariye!");
+    return;
+  }
+
+  const message =
+    "🥛 Naya Doodh Order%0A%0A" +
+    "👤 Naam: " + encodeURIComponent(name) + "%0A" +
+    "📍 Pata: " + encodeURIComponent(address) + "%0A" +
+    "📱 Mobile: " + encodeURIComponent(phone);
+
+  // Yahan APNA WhatsApp number daalo
+  const myWhatsApp = "9718790985";
+
+  window.open(
+    "https://wa.me/" + myWhatsApp + "?text=" + message,
+    "_blank"
+  );
+}
+</script>
 
 <header>
-<h1>🥛 Arihant Milk</h1>
+<h1>🥛 tik tone</h1>
 <p>Fresh Milk • Fast Delivery</p>
 </header>
 
