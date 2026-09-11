@@ -35,7 +35,18 @@ button{
 </head>
 
 <body>
-  <section class="order-box">
+  
+
+<header>
+<h1>🥛 tik tone</h1>
+<p>Fresh Milk • Fast Delivery</p>
+</header>
+
+<div class="box">
+<h2>Taaza Doodh, Ghar Tak 🥛</h2>
+<p>Fresh milk aur dairy products order karein.</p>
+<button>Order Now</button>
+</div><section class="order-box">
   <h2>🥛 Doodh Kharidne Ke Liye Contact Karein</h2>
 
   <input type="text" id="customerName" placeholder="Apna Naam" required>
@@ -67,22 +78,32 @@ function sendWhatsApp() {
     "📱 Mobile: " + encodeURIComponent(phone);
 
   // Yahan APNA WhatsApp number daalo
-  const myWhatsApp = "9718790985";
-
+  const myWhatsApp = "91XXXXXXXXXX";
+const myWhatsApp = "9718790985";
   window.open(
     "https://wa.me/" + myWhatsApp + "?text=" + message,
     "_blank"
   );
 }
 </script>
-
-<header>
-<h1>🥛 tik tone</h1>
-<p>Fresh Milk • Fast Delivery</p>
-</header>
-
-<div class="box">
-<h2>Taaza Doodh, Ghar Tak 🥛</h2>
-<p>Fresh milk aur dairy products order karein.</p>
-<button>Order Now</button>
+  <div class="moving-name">
+  🥛 Tik tone 🥛
 </div>
+  <style>
+.moving-name {
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+  position: relative;
+  animation: moveName 5s linear infinite alternate;
+}
+
+@keyframes moveName {
+  from {
+    left: 0;
+  }
+  to {
+    left: 70%;
+  }
+}
+</style>
